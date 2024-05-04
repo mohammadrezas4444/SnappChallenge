@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "015F682D-E26A-4FBB-9EDF-75E94E39F468"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getLatestLaunches(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7 - ee5dca6f195284ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SnappChallenge.InMemoryLaunchesRepository.getLatestLaunches(page: Swift.Int) async throws -&gt; Swift.Optional&lt;SnappChallenge.LaunchResponseDto&gt;"
+                  moduleName = "SnappChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadrezasohrabi/Desktop/SnappChallenge/SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7 - 61136cdc03ab096d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SnappChallenge.InMemoryLaunchesRepository.getLatestLaunches(page: Swift.Int) async throws -&gt; Swift.Optional&lt;SnappChallenge.LaunchResponseDto&gt;"
+                  moduleName = "SnappChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadrezasohrabi/Desktop/SnappChallenge/SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7 - 3d000b69f33848b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SnappChallenge.InMemoryLaunchesRepository.getLatestLaunches(page: Swift.Int) async throws -&gt; Swift.Optional&lt;SnappChallenge.LaunchResponseDto&gt;"
+                  moduleName = "SnappChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadrezasohrabi/Desktop/SnappChallenge/SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7 - 636a6b1766ecaab9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for SnappChallenge.InMemoryLaunchesRepository.getLatestLaunches(page: Swift.Int) async throws -&gt; Swift.Optional&lt;SnappChallenge.LaunchResponseDto&gt;"
+                  moduleName = "SnappChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadrezasohrabi/Desktop/SnappChallenge/SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "40F37E5D-699B-4CF9-830E-B04AE2841CC7 - 636a6b1766ecaab9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for SnappChallenge.InMemoryLaunchesRepository.getLatestLaunches(page: Swift.Int) async throws -&gt; Swift.Optional&lt;SnappChallenge.LaunchResponseDto&gt;"
+                  moduleName = "SnappChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadrezasohrabi/Desktop/SnappChallenge/SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44E605A6-03B2-4712-AEA7-5249A388C214"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getLatestLaunches(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F20EF8D2-07B5-4290-AE86-00A479DBD653"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SnappChallenge/Launches/Data/API/LaunchesAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getLatestLaunches(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7823867-2720-4639-869E-CD1946200C70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SnappChallenge/Network/Launches/LaunchesHttp.v1.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "parameters"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

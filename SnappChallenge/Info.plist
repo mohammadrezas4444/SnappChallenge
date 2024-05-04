@@ -15,11 +15,14 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
+	</dict>
+	<key>XCCONFIGS</key>
+	<dict>
+		<key>BASE_URL</key>
+		<string>$(SC_BASE_URL)</string>
 	</dict>
 </dict>
 </plist>

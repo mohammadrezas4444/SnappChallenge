@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  SnappChallenge
+//
+//  Created by Mohammad Reza Sohrabi on 2024-05-04.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SC_BASE_URL = https:\/\/api.spacexdata.com
