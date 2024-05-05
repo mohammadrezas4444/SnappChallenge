@@ -41,11 +41,6 @@ struct InMemoryLaunchesRepository: LaunchesRepositoryProtocol {
         return allLaunches.value[index]
     }
 
-    func bookmarkLaunch(flightNumber: Int) {
-        let launch = allLaunches.value.first(where: { $0.flightNumber == flightNumber })
-
-    }
-
     func cacheBookmark(flightNumber: Int) {
         bookmarkedList.value.insert(flightNumber)
     }

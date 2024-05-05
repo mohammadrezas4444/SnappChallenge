@@ -30,8 +30,8 @@
             filePath = "SnappChallenge/Launches/Data/RepositoryImp/InMemoryLaunchesRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "isBookmarkBefore(flightNumber:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -1,6 +1,50 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "DATE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
+        }
+      }
+    },
+    "DESCRIPTION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "FLIGHT_NUMBER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flight number"
+          }
+        }
+      }
+    },
+    "NAME" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
     "NO_NAME" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8,6 +52,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No name"
+          }
+        }
+      }
+    },
+    "RESULT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Result"
           }
         }
       }

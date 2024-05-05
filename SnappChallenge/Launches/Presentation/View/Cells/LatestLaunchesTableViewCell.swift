@@ -25,10 +25,10 @@ class LatestLaunchesTableViewCell: UITableViewCell {
 
     func fillCell(model: LaunchesModel) {
         iconView.sd_setImage(with: URL(string: model.links?.patch?.small ?? ""))
-        nameLabel.text = model.name
-        flightNumberLabel.text = "\(model.flightNumber)"
-        dateLabel.text = "\(model.dateUTC ?? "")"
-        resultLabel.text = "\(model.success ?? false)"
-        descriptionLabel.text = model.details
+        nameLabel.text = "\("NAME".localize): \(model.name ?? "")"
+        flightNumberLabel.text = "\("FLIGHT_NUMBER".localize): \(model.flightNumber)"
+        dateLabel.text = "\("DATE".localize): \(model.dateUTC ?? "")"
+        resultLabel.text = "\("RESULT".localize): \(model.success ?? false)"
+        descriptionLabel.text = "\("DESCRIPTION".localize): \(model.details ?? "")"
     }
 }
