@@ -17,6 +17,7 @@ struct InMemoryLaunchesRepository: LaunchesRepositoryProtocol {
     // MARK: - Properties
     private var allLaunches = CurrentValueSubject<[LaunchResponseDto.doc], Never>.init([])
     private var cachedIndex = CurrentValueSubject<Int?, Never>.init(nil)
+    private var bookmarkedList = CurrentValueSubject<Set<Int>, Never>.init(Set())
 
     func getLatestLaunches(page: Int) async throws -> LaunchResponseDto? {
         let response = try await launchesApi.getLatestLaunches(page: page)
@@ -38,5 +39,22 @@ struct InMemoryLaunchesRepository: LaunchesRepositoryProtocol {
         else { return nil }
 
         return allLaunches.value[index]
+    }
+
+    func bookmarkLaunch(flightNumber: Int) {
+        let launch = allLaunches.value.first(where: { $0.flightNumber == flightNumber })
+
+    }
+
+    func cacheBookmark(flightNumber: Int) {
+        bookmarkedList.value.insert(flightNumber)
+    }
+
+    func removeBookmark(flightNumber: Int) {
+        bookmarkedList.value.remove(flightNumber)
+    }
+
+    func isBookmarkBefore(flightNumber: Int) -> Bool {
+        bookmarkedList.value.contains(flightNumber)
     }
 }

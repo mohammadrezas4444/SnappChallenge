@@ -9,7 +9,6 @@ import Foundation
 
 struct LaunchResponseDto: Decodable {
     let totalDocs: Int
-    let offset: Int
     let limit: Int
     let totalPages: Int
     let page: Int

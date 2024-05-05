@@ -42,6 +42,10 @@
 		90E38FC92BE69CAB006046BA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FC82BE69CAB006046BA /* Environment.swift */; };
 		90E38FCB2BE6A56E006046BA /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FCA2BE6A56E006046BA /* Services.swift */; };
 		90E38FCE2BE6A5D7006046BA /* LaunchesHttp.v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FCD2BE6A5D7006046BA /* LaunchesHttp.v1.swift */; };
+		90E38FD02BE6FD3F006046BA /* QueryParamsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FCF2BE6FD3F006046BA /* QueryParamsDto.swift */; };
+		90E38FD92BE713CA006046BA /* CacheBookmarkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FD82BE713CA006046BA /* CacheBookmarkUseCase.swift */; };
+		90E38FDB2BE71449006046BA /* IsBookmarkedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FDA2BE71449006046BA /* IsBookmarkedUseCase.swift */; };
+		90E38FDD2BE71806006046BA /* RemoveBookmarkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E38FDC2BE71806006046BA /* RemoveBookmarkUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		90E38FC82BE69CAB006046BA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		90E38FCA2BE6A56E006046BA /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		90E38FCD2BE6A5D7006046BA /* LaunchesHttp.v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesHttp.v1.swift; sourceTree = "<group>"; };
+		90E38FCF2BE6FD3F006046BA /* QueryParamsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParamsDto.swift; sourceTree = "<group>"; };
+		90E38FD82BE713CA006046BA /* CacheBookmarkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBookmarkUseCase.swift; sourceTree = "<group>"; };
+		90E38FDA2BE71449006046BA /* IsBookmarkedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsBookmarkedUseCase.swift; sourceTree = "<group>"; };
+		90E38FDC2BE71806006046BA /* RemoveBookmarkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBookmarkUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +218,9 @@
 				905DA3CD2BE3D6ED00EA6B72 /* GetLatestLaunchesUseCase.swift */,
 				905DA3EA2BE633C100EA6B72 /* CacheLaunchUseCase.swift */,
 				905DA3EC2BE633CD00EA6B72 /* GetCachedLaunchUseCase.swift */,
+				90E38FD82BE713CA006046BA /* CacheBookmarkUseCase.swift */,
+				90E38FDA2BE71449006046BA /* IsBookmarkedUseCase.swift */,
+				90E38FDC2BE71806006046BA /* RemoveBookmarkUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				905DA3C32BE26F3000EA6B72 /* ResponseDto.swift */,
+				90E38FCF2BE6FD3F006046BA /* QueryParamsDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +420,7 @@
 				905DA3CE2BE3D6ED00EA6B72 /* GetLatestLaunchesUseCase.swift in Sources */,
 				905DA3CC2BE3D36600EA6B72 /* LaunchesDI.swift in Sources */,
 				905DA3D52BE3F55100EA6B72 /* LaunchesViewModel.swift in Sources */,
+				90E38FDD2BE71806006046BA /* RemoveBookmarkUseCase.swift in Sources */,
 				905DA3C82BE3D1F500EA6B72 /* LaunchesRepository.swift in Sources */,
 				907CD5AD2BE10F1400682D1E /* AppDelegate.swift in Sources */,
 				90E38FC32BE664A9006046BA /* NavGraph.swift in Sources */,
@@ -418,6 +431,8 @@
 				905DA3CA2BE3D33700EA6B72 /* InMemoryLaunchesRepository.swift in Sources */,
 				905DA3DD2BE407AB00EA6B72 /* LatestLaunchesTableViewCell.swift in Sources */,
 				90E38FCB2BE6A56E006046BA /* Services.swift in Sources */,
+				90E38FD92BE713CA006046BA /* CacheBookmarkUseCase.swift in Sources */,
+				90E38FD02BE6FD3F006046BA /* QueryParamsDto.swift in Sources */,
 				90E38FC92BE69CAB006046BA /* Environment.swift in Sources */,
 				905DA3D82BE3FE7500EA6B72 /* LaunchesViewController.swift in Sources */,
 				905DA3E92BE549B100EA6B72 /* LaunchDetailViewModel.swift in Sources */,
@@ -426,6 +441,7 @@
 				90E38FCE2BE6A5D7006046BA /* LaunchesHttp.v1.swift in Sources */,
 				905DA3D02BE3E3DC00EA6B72 /* DomainModel.swift in Sources */,
 				905DA3C02BE263D800EA6B72 /* NetworkService.swift in Sources */,
+				90E38FDB2BE71449006046BA /* IsBookmarkedUseCase.swift in Sources */,
 				907CD5AF2BE10F1400682D1E /* SceneDelegate.swift in Sources */,
 				905DA3F02BE6393600EA6B72 /* LaunchDetailsViewController.swift in Sources */,
 				905DA3ED2BE633CD00EA6B72 /* GetCachedLaunchUseCase.swift in Sources */,

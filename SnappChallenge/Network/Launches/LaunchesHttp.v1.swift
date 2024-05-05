@@ -10,7 +10,7 @@ import Alamofire
 
 extension LaunchesService.v1 {
     enum LaunchesHttp {
-        case allLaunches(page: Int)
+        case allLaunches(page: Int, query: QueryParams)
     }
 }
 
@@ -34,28 +34,18 @@ extension LaunchesService.v1.LaunchesHttp: HTTPRouter {
     }
     
     var headers: Alamofire.HTTPHeaders? {
-        switch self {
-            default: return nil
-        }
+        return nil
     }
     
     var parameters: Parameters? {
-        switch self {
-            case .allLaunches(let page):
-                let query: [String: Any] = [
-                    "query": [
-                        "upcoming": false
-                    ],
-                    "options": [
-                        "limit": 50,
-                        "page": page,
-                        "sort": [
-                            "flight_number": "desc"
-                        ]
-                    ]
-                ]
+        return nil
+    }
 
-                return query
+    func body() throws -> Data? {
+        let encoder = JSONEncoder()
+        switch self {
+            case .allLaunches(_, let queryParams):
+                return try? encoder.encode(queryParams)
         }
     }
 

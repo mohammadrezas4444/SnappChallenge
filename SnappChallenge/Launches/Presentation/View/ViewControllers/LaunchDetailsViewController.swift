@@ -25,6 +25,7 @@ class LaunchDetailsViewController: UIViewController {
     // MARK: - Peroperties
     private lazy var cancelBag = CancelBag()
     private var wikipediaLink: String?
+    private var isBookmarked: Bool = false
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -45,24 +46,35 @@ class LaunchDetailsViewController: UIViewController {
     }
 
     // MARK: - Setup views
-    private func setupViews(_ launch: LaunchesModel.doc) {
+    private func setupViews(_ launch: LaunchesModel) {
         let imageURL = URL(string: launch.links?.patch?.large ?? "")
         coverImageView.sd_setImage(with: imageURL)
-
         nameLabel.text = launch.name ?? "NO_NAME".localize
-        BookmarkImageView.image = .add
+        isBookmarked = launch.isBookmarked
         dateLabel.text = launch.dateUTC
+        detailsLabel.text = launch.details
+        setupBookmarkButton()
+        setupWikipedia(launch)
+    }
 
+    private func setupBookmarkButton() {
+        setBookmarkImageView()
+        BookmarkImageView.isUserInteractionEnabled = true
+        BookmarkImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapOnBookmarkButton)))
+    }
+
+    private func setBookmarkImageView() {
+        BookmarkImageView.image = isBookmarked ? UIImage(resource: .filledBookmark) : UIImage(resource: .bookmark)
+    }
+
+    private func setupWikipedia(_ launch: LaunchesModel) {
         wikipediaLink = launch.links?.wikipedia
-
         wikipediaLabel.isHidden = launch.links?.wikipedia == nil
         wikipediaLabel.isUserInteractionEnabled = true
         wikipediaLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapOnWikipedia)))
         let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
         let underlineAttributedString = NSAttributedString(string: "WIKIPEDIA_LINK".localize, attributes: underlineAttribute)
         wikipediaLabel.attributedText = underlineAttributedString
-
-        detailsLabel.text = launch.details
     }
 
     @objc func didTapOnWikipedia() {
@@ -71,4 +83,9 @@ class LaunchDetailsViewController: UIViewController {
         self.view.window?.rootViewController?.present(safariViewController, animated: true)
     }
 
+    @objc func didTapOnBookmarkButton() {
+        isBookmarked = !isBookmarked
+        setBookmarkImageView()
+        isBookmarked ? viewModel.attemptToBookmark() : viewModel.attemptToRemoveBookmark()
+    }
 }

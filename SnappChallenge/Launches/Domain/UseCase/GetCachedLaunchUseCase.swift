@@ -10,8 +10,11 @@ import Factory
 
 struct GetCachedLaunchUseCase {
     @Injected(\LaunchesDI.launchesRepository) private var repo
+    @Injected(\LaunchesDI.isBookmarkedUseCase) private var isBookmarkedUseCase
 
-    func execute() -> LaunchesModel.doc? {
-        repo.getCachedLanuch()?.mapToDocModel()
+    func execute() -> LaunchesModel? {
+        guard var launch = repo.getCachedLanuch()?.mapToModel() else { return nil }
+        launch.isBookmarked = isBookmarkedUseCase.execute(flightNumber: launch.flightNumber)
+        return launch
     }
 }

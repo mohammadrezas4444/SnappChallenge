@@ -28,7 +28,6 @@ extension HTTPRouter {
         }
 
         var request = try URLRequest(url: url, method: method, headers: self.aditionalHeader())
-        let encoder = URLEncodedFormParameterEncoder(encoder: URLEncodedFormEncoder(arrayEncoding: .noBrackets))       
         request = try URLEncoding.default.encode(request, with: parameters)
         request.httpBody = try! self.body()
 

@@ -23,7 +23,7 @@ class LatestLaunchesTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func fillCell(model: LaunchesModel.doc) {
+    func fillCell(model: LaunchesModel) {
         iconView.sd_setImage(with: URL(string: model.links?.patch?.small ?? ""))
         nameLabel.text = model.name
         flightNumberLabel.text = "\(model.flightNumber)"

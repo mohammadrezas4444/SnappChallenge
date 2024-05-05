@@ -14,4 +14,10 @@ protocol LaunchesRepositoryProtocol {
     func cacheLaunch(index: Int)
 
     func getCachedLanuch() -> LaunchResponseDto.doc?
+
+    func cacheBookmark(flightNumber: Int)
+
+    func removeBookmark(flightNumber: Int)
+
+    func isBookmarkBefore(flightNumber: Int) -> Bool
 }

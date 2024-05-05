@@ -44,4 +44,16 @@ final class LaunchesDI: SharedContainer {
     var launchDetailViewModel: Factory<LaunchDetailViewModel> {
         self { LaunchDetailViewModel() }
     }
+
+    var cacheBookmarkUseCase: Factory<CacheBookmarkUseCase> {
+        self { CacheBookmarkUseCase() }
+    }
+
+    var isBookmarkedUseCase: Factory<IsBookmarkedUseCase> {
+        self { IsBookmarkedUseCase() }
+    }
+
+    var removeBookmarkUseCase: Factory<RemoveBookmarkUseCase> {
+        self { RemoveBookmarkUseCase() }
+    }
 }

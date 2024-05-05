@@ -8,41 +8,27 @@
 import Foundation
 
 struct LaunchesModel {
-    let isBookmarked: Bool = false
-    let totalDocs: Int
-    let offset: Int
-    let limit: Int
-    let totalPages: Int
-    let page: Int
-    let pagingCounter: Int
-    let hasPrevPage: Bool
-    let hasNextPage: Bool
-    let prevPage: Int?
-    let nextPage: Int?
-    let docs: [doc]
+    var isBookmarked: Bool = false
+    let links: Links?
+    let success: Bool?
+    let failures: [Failure]?
+    let details: String?
+    let flightNumber: Int
+    let name: String?
+    let dateUTC: String?
 
-    struct doc {
-        let links: Links?
-        let success: Bool?
-        let failures: [Failure]?
-        let details: String?
-        let flightNumber: Int
-        let name: String?
-        let dateUTC: String?
+    struct Links {
+        let patch: Patch?
+        let wikipedia: String?
 
-        struct Links {
-            let patch: Patch?
-            let wikipedia: String?
-
-            struct Patch {
-                let small: String?
-                let large: String?
-            }
+        struct Patch {
+            let small: String?
+            let large: String?
         }
+    }
 
-        struct Failure {
-            let reason: String?
-        }
+    struct Failure {
+        let reason: String?
     }
 }
 
@@ -51,7 +37,7 @@ struct LaunchesSections: Hashable {
         let items: [Item]
 
         enum Item: Hashable {
-            case allLaunches(LaunchesModel.doc)
+            case allLaunches(LaunchesModel)
         }
     }
 }

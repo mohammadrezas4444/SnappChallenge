@@ -95,7 +95,7 @@ class LaunchesViewController: UIViewController {
         sections.forEach {
             snapshot.appendItems($0.items, toSection: $0)
         }
-        dataSource.apply(snapshot)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 

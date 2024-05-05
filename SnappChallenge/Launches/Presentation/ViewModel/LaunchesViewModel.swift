@@ -19,7 +19,8 @@ class LaunchesViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var navigateToDetails: Void?
 
-    private var launchesModel: LaunchesModel?
+    private var launchesModel: [LaunchesModel] = []
+    private var page = 1
 
     // MARK: - Init
     init() {
@@ -28,7 +29,7 @@ class LaunchesViewModel: ObservableObject {
     }
 
     private func getFirstPage() {
-        getLaunches(page: 1)
+        getLaunches(page: page)
     }
 
     private func getLaunches(page: Int) {
@@ -36,8 +37,8 @@ class LaunchesViewModel: ObservableObject {
             guard let self else { return }
 
             do {
-                launchesModel = try await getLatestLaunchesUseCase.execute(page: page)
-                launchesSections = [LaunchesSections.Section(items: launchesModel?.docs.compactMap { LaunchesSections.Section.Item.allLaunches($0) } ?? [])]
+                launchesModel.append(contentsOf: try await getLatestLaunchesUseCase.execute(page: page)) 
+                launchesSections = [LaunchesSections.Section(items: launchesModel.map { LaunchesSections.Section.Item.allLaunches($0) })]
             } catch(let error) {
                 print(error)
             }
@@ -52,11 +53,8 @@ class LaunchesViewModel: ObservableObject {
     }
 
     func attemptToGetNextPage() {
-        guard let launchesModel else { return }
         isLoading = true
-        let nextPage = launchesModel.nextPage
-        if launchesModel.hasNextPage {
-            getLaunches(page: 3/*nextPage ?? launchesModel.page + 1*/)
-        }
+        page += 1
+        getLaunches(page: page)
     }
 }
